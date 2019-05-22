@@ -1,7 +1,8 @@
 <h1>簡介</h1>
 <p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
 <p><img alt="" height="471" src="/images/gocycle4.png" width="587"/></p>
-<p></p><h2>目錄結構</h2>
+<p></p>
+<h2>目錄結構</h2>
 <p>CMSimfly 的動態系統採用 Python3 + Flask 建構, 並且利用 Beatifulsoup 解讀位於 contig 目錄中的 content.htm 超文件檔案.</p>
 <p>content.htm 檔案可以透過動態系統中的 generate_pages 功能, 將超文件轉為位於 content 目錄中的個別頁面檔案.</p>
 <p>動態系統與靜態系統則共用 downloads, images, static 等目錄, 其中 downloads 目錄存放在動態系統上傳的文件檔, 而 images 目錄則存放動態系統所上傳的影像檔案, 包括 jpg, png 與 gif 等格式圖檔.</p>
@@ -449,8 +450,11 @@ COPY TO CLIPBOARD	</pre>
 <p>各頁面標題目前不支援特殊符號, 例如: "/", "?" 等, 若已經發生程式無法解讀頁面的情況, 只能從編輯 config/content.htm 下手, 若系統位於遠端, 則後續必須要再設法提供一個額外的編輯 config/content.htm 檔案的網際連結功能.</p>
 <h4>Video 引用不支援內部引用</h4>
 <p>tinymce 中插入 video 的小視窗, 要移除引用的圖像與連結, 因為一般建議不要在內容中存入 .mp4 的影片資料, 而只接受引入影片 URL 連結.</p>
-<h1>近端配置與管理</h1><h2>網路連線設定</h2>
+<h1>近端配置與管理</h1>
+<h2>網路連線設定</h2>
 <p>當不能上網時請先確認IP的取得是自動的</p>
+<p>因為教室的IP分配是由DHCP自動分配</p>
+<p><img alt="" height="400" src="/images/IP設定.png" width="357"/></p>
 <p>再來確定瀏覽器的Proxy設定正確</p>
 <p>使用Proxy的原因是不使用的話每台電腦連到同樣的網站都是一次流量</p>
 <p>教室這麼多台電腦會造成許多不必要的連線</p>
@@ -462,7 +466,12 @@ COPY TO CLIPBOARD	</pre>
 <p>也不會造成額外不必要的對外連線</p>
 <p>適合在區網下有大量電腦使用</p>
 <p>非以上情況  可能會因為Proxy主機效能不佳造成連線緩慢</p>
-<h2>配置可攜程式環境</h2>
+<p><strong>Proxy常見例外IP</strong></p>
+<ul style="list-style-type: square;">
+<li>192.168.*</li>
+<li>127.0.0.1</li>
+<li>localhost</li>
+</ul><h2>配置可攜程式環境</h2>
 <p>首先取得 Windows 10 64 位元環境下的可攜程式環境</p>
 <p>(下載  <a href="https://drive.google.com/open?id=1_TQBw1PM7jxrmtsBjvLKbjJWfGs8Ug79" target="_blank">2019_cdb_w5.7z</a> or <a href="https://drive.google.com/file/d/12IOfTpupXL0czFM_ZeHt-6sxfXwZK6ai/view?usp=sharing" target="_blank">2019_cdb_w13.7z</a>) 將其解壓後</p>
 <p>放入 USB3.0 規格以上的隨身碟或隨身硬碟<br/><br/>以滑鼠點擊 start.bat 即可開啟可攜隨身系統</p>
@@ -478,8 +487,9 @@ COPY TO CLIPBOARD	</pre>
 <p></p>
 <h1>Git</h1>
 <h2>建立GitHub倉儲</h2>
-<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/t2VOjWQrseU" width="900"></iframe></p>
-<h2>啟用GitHub Pages</h2>
+<p>建立倉儲有兩種方法, 以下介紹的是其中一種比較簡易,</p>
+<p>另一種需要自己下指令來初始化倉儲較為麻煩.</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/t2VOjWQrseU" width="900"></iframe></p><h2>啟用GitHub Pages</h2>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/yfNK-AXE6nE" width="900"></iframe></p>
 <p>啟用後GitHub Pages預設會伺服根目錄下的index.html</p>
 <h2>建立 OpenSSH 格式的 Private 與 Public Keys</h2>
@@ -491,7 +501,18 @@ COPY TO CLIPBOARD	</pre>
 <p>-C是加入註解</p>
 <h2>使用 SSH 執行 Git clone 與 push</h2>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/yKMCb-p3OhM" width="900"></iframe></p>
-<h1>產生亂數1~51</h1>
+<h2>倉儲改版</h2>
+<p><span>建立 Git 倉儲後, 並 clone 至近端工作後, 對遠端倉儲改版.</span></p>
+<p><span>可攜系統中已經內建 git, 可以在啟動 start.bat 後, 透過 path 的路徑設定, </span></p>
+<p><span>可以直接執行 git 指令.</span></p>
+<p><span>使用者改版後, 可以直接透過 git add, commit 與 push 對遠端倉儲改版.</span></p>
+<p><span><strong>Git基本指令</strong></span></p>
+<ul style="list-style-type: square;">
+<li>git add :把已修改的檔案增加暫存區, 可以加單一檔案也可以使用 . 增加所有檔案.</li>
+<li>git commit -m "提交訊息" :m=message, 用來將暫存區的檔案加到.git目錄下.</li>
+<li>git push :將提交的內容推到遠端倉儲加上 -f 會強制push覆蓋掉遠端資料,請小心使用.</li>
+<li>git pull :將遠端較新的資料拉回近端合併, 當push的時候有提示遠端的版本更新時, 請先拉後推, 不要直接使用-f.</li>
+</ul><h1>產生亂數1~51</h1>
 <p></p>
 <p><button onclick="myFunction()">click</button></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;p&gt;&lt;button onclick="myFunction()"&gt;click&lt;/button&gt;&lt;/p&gt;
