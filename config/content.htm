@@ -453,8 +453,17 @@ COPY TO CLIPBOARD	</pre>
 <h1>近端配置與管理</h1>
 <h2>網路連線設定</h2>
 <p>當不能上網時請先確認IP的取得是自動的</p>
+<p>因為教室的IP分配是DHCP server分配的所以要設為自動</p>
 <p><img alt="" height="400" src="/images/IP設定.png" width="357"/></p>
 <p>再來確定瀏覽器的Proxy設定正確</p>
+<p>每次上課能用proxy可能都不一樣  視當天狀況更動</p>
+<p>有時可能因為proxy效能不佳   所以反而不設定proxy會更快</p>
+<p>請依實際狀況決定是否要設定</p>
+<p>點擊進階即可進入例外IP設定</p>
+<p><img alt="" height="400" src="/images/proxy設定.png" width="319"/></p>
+<p>再來要設定例外IP  不設定的話電腦會連到proxy去找這些近端IP</p>
+<p><img alt="" height="400" src="/images/proxy例外.png" width="319"/></p>
+<p>這樣會導致無法連線到自己的動態網頁進行編輯</p>
 <p>使用Proxy的原因是不使用的話每台電腦連到同樣的網站都是一次流量</p>
 <p>教室這麼多台電腦會造成許多不必要的連線</p>
 <p>設置Proxy後只要有一台電腦連線過後</p>
@@ -483,8 +492,15 @@ COPY TO CLIPBOARD	</pre>
 <li><span>可以建立目錄:mkdir</span></li>
 <li><span>清除目前的命令列顯示的內容:cls</span></li>
 </ul>
-<p></p>
-<h1>Git</h1>
+<h2>導入CMSimfly</h2>
+<p>將自己的倉儲clone到近端後  會發現裡面有.git的資料夾以及README.md</p>
+<p>.git資料夾裡的資料存放著關於倉儲的提交紀錄所以盡量不要去動</p>
+<p>而README.md則是github上的顯示內容</p>
+<p><img alt="" height="299" src="/images/README.md內容.png" width="444"/></p>
+<p>將CMSimfly(<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly</a>)</p>
+<p>clone下來後將.git及README.md以外的東西全部複製到自己的倉儲下</p>
+<p>cd切換目錄到自己的倉儲後輸入python wsgi.py即可開啟動態網頁</p>
+<p>在瀏覽器輸入<a>https://127.0.0.1:9443</a>就可以進入網頁開始編輯</p><h1>Git</h1>
 <h2>建立GitHub倉儲</h2>
 <p>建立倉儲有兩種方法, 以下介紹的是其中一種比較簡易,</p>
 <p>另一種需要自己下指令來初始化倉儲較為麻煩.</p>
