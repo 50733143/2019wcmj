@@ -507,7 +507,8 @@ COPY TO CLIPBOARD	</pre>
 <p>所以必須使用學校提供的VPN服務</p>
 <p><a href="https://nfucc.nfu.edu.tw/zh/download/download-network/ssl-vpn">TWAREN SSL-VPN</a></p>
 <p>點擊裡面提供的連結下載<strong>Juniper Networks Connect</strong></p>
-<p><strong><img alt="" height="87" src="/images/chrome_NK1b11WcKN.png" width="269"/></strong></p>
+<p>下載符合自己系統的檔案</p>
+<p><strong><img caption="false" height="184" src="/images/chrome_XvJRp8KTRe.png" width="800"/></strong></p>
 <p>點兩下安裝 之後打開<strong>Network Connect</strong></p>
 <p><img alt="" height="109" src="/images/chrome_3Y9n4Ybj4U.png" width="188"/></p>
 <p><img alt="" height="400" src="/images/dsNetworkConnect_jK6IJtrPNU.png" width="440"/></p>
@@ -605,7 +606,17 @@ COPY TO CLIPBOARD	</pre>
 <p><img alt="" height="289" src="/images/filezilla_2.png" width="381"/></p>
 <p>之後點擊新增站台  名稱自訂  協定使用SFTP  主機輸入Ubuntu的IP  連接埠留白即可</p>
 <p>登入形式選詢問密碼  使用者就是Ubuntu安裝時設定的name  設定完後就可以確認保存</p>
-<p><img alt="" height="500" src="/images/filezilla_3.png" width="555"/></p><h1>Git</h1>
+<p><img alt="" height="500" src="/images/filezilla_3.png" width="555"/></p>
+<h1>Fossil SCM</h1>
+<p><span>Fossil是一個分散式版本控制系統  類似Git</span></p>
+<p><span>請到他們官網下載windows及linux版本(<a href="https://fossil-scm.org">https://fossil-scm.org</a>)</span></p>
+<p>到Download Page下載最新的版本</p>
+<p><img alt="" height="266" src="/images/Fossil SCM下載.png" width="589"/></p>
+<p>將windows版解壓縮到Y:下  這樣當Ubuntu配置好Fossil後  才有辦法使用</p>
+<p>Ubuntu使用sudo apt install fossil  安裝完後的版本為2.5</p>
+<p>所以我們將Linux版解壓縮   使用FileZilla送到Ubuntu的<span>/homt/kmol2019/</span></p>
+<p><span>再使用sudo cp fossil /usr/bin/  用新版的fossil蓋掉舊版的  </span></p>
+<p><span>複製後  再用 fossil version 查驗版本  確認為最新的 2.8 版</span></p><h1>Git</h1>
 <h2>建立GitHub倉儲</h2>
 <p>建立倉儲有兩種方法, 以下介紹的是其中一種比較簡易,</p>
 <p>另一種需要自己下指令來初始化倉儲較為麻煩.</p>
