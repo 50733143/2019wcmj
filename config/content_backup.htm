@@ -609,7 +609,21 @@ COPY TO CLIPBOARD	</pre>
 <p><img alt="" height="500" src="/images/filezilla_3.png" width="555"/></p>
 <h1>Ubuntu環境配置</h1>
 <h2>環境準備</h2>
-<h2>Fossil SCM</h2>
+<ol>
+<li><span>安裝最新版的 Virtualbox</span></li>
+<li><span>建立 Ubuntu 18.04 虛擬主機</span></li>
+<li><span>以網路卡橋接啟動 Ubuntu 伺服器</span></li>
+<li>使用以下指令來安裝所需要的軟體</li>
+</ol>
+<ul style="list-style-type: square;">
+<li><span>sudo apt install nginx</span></li>
+<li><span>sudo apt install uwsgi</span></li>
+<li><span>sudo apt install python3-pip</span></li>
+<li><span>sudo apt install uwsgi uwsgi-plugin-python3</span></li>
+<li><span>sudo pip3 install flask bs4 lxml</span></li>
+<li><span>sudo pip3 install uwsgi</span><span></span></li>
+</ul>
+<p>Fossil由於這樣安裝的版本會較舊  所以另有分頁說明安裝方法</p><h2>Fossil SCM</h2>
 <p><span>Fossil是一個分散式版本控制系統  類似Git</span></p>
 <p><span>請到他們官網下載windows及linux版本(<a href="https://fossil-scm.org">https://fossil-scm.org</a>)</span></p>
 <p>到Download Page下載最新的版本</p>
@@ -668,7 +682,29 @@ COPY TO CLIPBOARD	</pre>
 <li><a href="https://desktop.github.com/">GitHub Desktop</a></li>
 </ul>
 <p>當然還有更多  這邊就不多作介紹了</p>
-<h1>產生亂數1~51</h1>
+<h1>儲存設備格式化</h1>
+<p>大家應該都有發現要將單檔4G以上的檔案放入隨身碟都會出現</p>
+<p><strong>「檔案太大無法放置在目的地檔案系統」</strong></p>
+<p><strong></strong>這是受限於FAT32這個檔案系統  <span>最大單一檔案大小為</span><span lang="EN-US"> 2^32 </span><span>位元組</span><span lang="EN-US">= 4GB </span></p>
+<p>這時我們可以將隨身碟格式化成exFAT</p>
+<p>將你的隨身碟插入電腦  並將資料都先取出  因為格式化會清空資料</p>
+<p>對隨身碟右鍵點擊格式化</p>
+<p><img alt="" height="272" src="/images/隨身碟格式化1.png" width="346"/></p>
+<p>之後檔案系統選擇exFAT  配置單位就不要動  快速格式化就看自己要不要用</p>
+<p><img caption="false" height="500" src="/images/隨身碟格式化2.png" width="286"/></p>
+<p>不要動或是選預設配置大小也可以</p>
+<p><img alt="" height="144" src="/images/隨身碟格式化3.png" width="355"/></p>
+<p>都選好之後就按開始即可  等它格式化完就可以把資料移回去了</p>
+<p><strong>為什麼不使用NTFS呢?</strong></p>
+<p><span>因為NTFS分區是採用「日誌式」的檔案系統  需要記錄詳細的讀寫操作</span></p>
+<p><span>每次的讀寫操作都需要紀錄所以會頻繁的讀寫  比較傷</span><span>快閃記憶體磁碟晶片</span></p>
+<p>並不適合隨身碟使用</p>
+<p><span>但如果是外接硬碟就可以使用NTFS但NTFS為windows的檔案系統</span></p>
+<p>在Mac系統或其他系統無法使用在相容性上較差</p>
+<p><strong>exFAT</strong></p>
+<p>跨系統相容性佳  如<span lang="EN-US">Windows</span>、<span lang="EN-US">Mac OS X</span>與<span lang="EN-US">Linux</span></p>
+<p><span lang="EN-US">沒有單檔4G的限制</span></p>
+<p><span lang="EN-US"><span>讀取大容量檔案時獲得更理想的速度</span></span></p><h1>產生亂數1~51</h1>
 <p></p>
 <p><button onclick="myFunction()">click</button></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;p&gt;&lt;button onclick="myFunction()"&gt;click&lt;/button&gt;&lt;/p&gt;
