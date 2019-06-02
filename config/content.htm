@@ -607,7 +607,23 @@ COPY TO CLIPBOARD	</pre>
 <p>之後點擊新增站台  名稱自訂  協定使用SFTP  主機輸入Ubuntu的IP  連接埠留白即可</p>
 <p>登入形式選詢問密碼  使用者就是Ubuntu安裝時設定的name  設定完後就可以確認保存</p>
 <p><img alt="" height="500" src="/images/filezilla_3.png" width="555"/></p>
-<h1>Fossil SCM</h1>
+<h1>Ubuntu環境配置</h1>
+<h2>環境準備</h2>
+<ol>
+<li><span>安裝最新版的 Virtualbox</span></li>
+<li><span>建立 Ubuntu 18.04 虛擬主機</span></li>
+<li><span>以網路卡橋接啟動 Ubuntu 伺服器</span></li>
+<li>使用以下指令來安裝所需要的軟體</li>
+</ol>
+<ul style="list-style-type: square;">
+<li><span>sudo apt install nginx</span></li>
+<li><span>sudo apt install uwsgi</span></li>
+<li><span>sudo apt install python3-pip</span></li>
+<li><span>sudo apt install uwsgi uwsgi-plugin-python3</span></li>
+<li><span>sudo pip3 install flask bs4 lxml</span></li>
+<li><span>sudo pip3 install uwsgi</span><span></span></li>
+</ul>
+<p>Fossil由於這樣安裝的版本會較舊  所以另有分頁說明安裝方法</p><h2>Fossil SCM</h2>
 <p><span>Fossil是一個分散式版本控制系統  類似Git</span></p>
 <p><span>請到他們官網下載windows及linux版本(<a href="https://fossil-scm.org">https://fossil-scm.org</a>)</span></p>
 <p>到Download Page下載最新的版本</p>
