@@ -1,5 +1,6 @@
 <h1>簡介</h1>
 <p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
+<p><span>網際內容管理系統的功能是利用 WWW 客戶端與伺服器端的功能, 讓使用者可以將有用的內容放在雲端, 目的在能利用此架構進行協同設計.</span><br/><br/><span>隨著 CMSimfly 不斷因為需求改版, 先前引用舊版程式碼或設定的用戶, 若無法及時更新版本或自行修正, 使用者間就會產生許多謬誤.</span><br/><br/><span>有鑑於此, 將 CMSimfly 升級為 </span><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a><span>, 使用者之後引用 CMSiMDE, 可以將此一網際程式模組設為倉儲中的<span> </span></span><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule,</a><span><span> </span>若 CMSiMDE 小改版, 各用戶可以利用</span></p>
 <p><img alt="" height="471" src="/images/gocycle4.png" width="587"/></p>
 <p></p>
 <h2>目錄結構</h2>
@@ -522,7 +523,8 @@ COPY TO CLIPBOARD	</pre>
 <p><img alt="" height="484" src="/images/VPN7.png" width="578"/></p>
 <p>這樣就代表連線成功了</p>
 <p><img alt="" height="658" src="/images/VPN8.png" width="322"/></p>
-<p>使用網頁登入過之後就可以直接打開軟體連線</p><h2>How to Download</h2>
+<p>使用網頁登入過之後就可以直接打開軟體連線</p>
+<h2>How to Download</h2>
 <p>到學校的電算中心網站<a href="https://nfucc.nfu.edu.tw/zh/">https://nfucc.nfu.edu.tw/zh/</a></p>
 <p>滾動到下面找到校園授權軟體下載專區</p>
 <p><img alt="" height="400" src="/images/chrome_F0O9ukx2aO.png" width="562"/></p>
@@ -873,7 +875,8 @@ execargs = /usr/bin/fossil http /home/server-50733143/repository/2019wcmj/ --htt
 <li><a href="https://desktop.github.com/">GitHub Desktop</a></li>
 </ul>
 <p>當然還有更多  這邊就不多作介紹了</p>
-<h1>儲存設備格式化</h1>
+<h2>增加子模組</h2>
+<p>切換到倉儲下後輸入git submodule add &lt;url&gt; &lt;資料夾名稱&gt;</p><h1>儲存設備格式化</h1>
 <p>大家應該都有發現要將單檔4G以上的檔案放入隨身碟都會出現</p>
 <p><strong>「檔案太大無法放置在目的地檔案系統」</strong></p>
 <p><strong></strong>這是受限於FAT32這個檔案系統  <span>最大單一檔案大小為</span><span lang="EN-US"> 2^32 </span><span>位元組</span><span lang="EN-US">= 4GB </span></p>
@@ -918,7 +921,8 @@ function myFunction() {
 <h1>網管期中自評影片</h1>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="693" src="https://www.youtube.com/embed/25xyi97_fTQ" width="1280"></iframe></p>
 <h1>網管期末自評影片</h1>
-<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/EzqNabY5gko" width="900"></iframe></p><h1>ROC flag</h1>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/EzqNabY5gko" width="900"></iframe></p>
+<h1>ROC flag</h1>
 <p>如果是使用舊版CMSimfly需先修改flaskapp.py才可show圖</p>
 <p>使用最新版的CMSimfly就沒有這個問題</p>
 <p>savePage()的修改</p>
